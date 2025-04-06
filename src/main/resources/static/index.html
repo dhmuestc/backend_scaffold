@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后端脚手架项目</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .feature {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .feature h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .api-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .api-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>后端脚手架项目</h1>
+        <p>基于Spring Boot的DDD架构RBAC权限模型后端系统</p>
+    </header>
+
+    <div class="container">
+        <div class="feature">
+            <h3>领域驱动设计 (DDD)</h3>
+            <p>采用领域驱动设计架构，将业务逻辑与技术实现分离，提高代码的可维护性和可扩展性。</p>
+        </div>
+
+        <div class="feature">
+            <h3>基于角色的访问控制 (RBAC)</h3>
+            <p>实现了完整的RBAC权限模型，支持用户、角色、权限的灵活配置和管理。</p>
+        </div>
+
+        <div class="feature">
+            <h3>RESTful API</h3>
+            <p>提供标准的RESTful API接口，支持JSON格式的数据交换，便于前后端分离开发。</p>
+        </div>
+
+        <div class="feature">
+            <h3>安全性</h3>
+            <p>集成Spring Security和JWT令牌认证，保障系统的安全性。</p>
+        </div>
+
+        <div class="feature">
+            <h3>数据持久化</h3>
+            <p>使用Spring Data JPA简化数据访问层的开发，支持多种数据库。</p>
+        </div>
+
+        <a href="/swagger-ui.html" class="api-link">API文档</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 后端脚手架项目 - 基于Spring Boot的企业级应用开发框架</p>
+    </footer>
+</body>
+</html>

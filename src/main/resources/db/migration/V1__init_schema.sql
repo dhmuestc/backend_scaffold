@@ -1,0 +1,37 @@
+-- 初始化数据库模式
+
+-- 用户表
+CREATE TABLE IF NOT EXISTS users (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    nickname VARCHAR(50),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    address VARCHAR(255),
+    avatar VARCHAR(255),
+    status VARCHAR(20) NOT NULL,
+    last_login_time TIMESTAMP,
+    created_by VARCHAR(50),
+    created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_by VARCHAR(50),
+    updated_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    is_deleted BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+-- 角色表
+CREATE TABLE IF NOT EXISTS roles (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(255),
+    is_enabled BOOLEAN NOT NULL DEFAULT TRUE,
+    created_by VARCHAR(50),
+    created_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_by VARCHAR(50),
+    updated_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    is_deleted BOOLEAN NOT NULL DEFAULT FALSE
+);
+
+-- 权限表
+CREATE TABLE IF NOT EXISTS permissions
